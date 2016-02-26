@@ -9,9 +9,10 @@ import android.widget.Button;
 import com.jackie.processing.image.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button primaryColor;
-    private Button colorMatrix;
-    private Button pixelsEffect;
+    private Button mPrimaryColor;
+    private Button mColorMatrix;
+    private Button mPixelsEffect;
+    private Button mMatrix;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,28 +24,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initView() {
-        primaryColor = (Button) findViewById(R.id.primary_color);
-        colorMatrix = (Button) findViewById(R.id.color_matrix);
-        pixelsEffect = (Button) findViewById(R.id.pixels_effect);
+        mPrimaryColor = (Button) findViewById(R.id.primary_color);
+        mColorMatrix = (Button) findViewById(R.id.color_matrix);
+        mPixelsEffect = (Button) findViewById(R.id.pixels_effect);
+        mMatrix = (Button) findViewById(R.id.matrix);
     }
 
     private void initEvent() {
-        primaryColor.setOnClickListener(this);
-        colorMatrix.setOnClickListener(this);
-        pixelsEffect.setOnClickListener(this);
+        mPrimaryColor.setOnClickListener(this);
+        mColorMatrix.setOnClickListener(this);
+        mPixelsEffect.setOnClickListener(this);
+        mMatrix.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.primary_color:
-                startActivity(new Intent(this, PrimaryColorActivity.class));
+                intent = new Intent(this, PrimaryColorActivity.class);
                 break;
             case R.id.color_matrix:
-                startActivity(new Intent(this, ColorMatrixActivity.class));
+                intent = new Intent(this, ColorMatrixActivity.class);
                 break;
             case R.id.pixels_effect:
-                startActivity(new Intent(this, PixelsEffectActivity.class));
+                intent = new Intent(this, PixelsEffectActivity.class);
+                break;
+            case R.id.matrix:
+                intent = new Intent(this, MatrixActivity.class);
+                break;
         }
+
+        startActivity(intent);
     }
 }
