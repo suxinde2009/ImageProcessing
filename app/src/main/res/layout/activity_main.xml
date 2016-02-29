@@ -39,4 +39,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Matrix"/>
+
+    <Button
+        android:id="@+id/round_view_xfermode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Round Rect Xfermode"/>
+
+    <Button
+        android:id="@+id/bitmap_shader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bitmap Shader"/>
 </LinearLayout>

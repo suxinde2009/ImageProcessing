@@ -21,6 +21,8 @@
         <activity android:name=".ui.PixelsEffectActivity"/>
 
         <activity android:name=".ui.MatrixActivity"/>
+        <activity android:name=".ui.RoundRectXfermodeActivity"/>
+        <activity android:name=".ui.BitmapShaderActivity"/>
     </application>
 
 </manifest>

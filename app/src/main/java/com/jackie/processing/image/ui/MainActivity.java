@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mColorMatrix;
     private Button mPixelsEffect;
     private Button mMatrix;
+    private Button mRoundRectXfermode;
+    private Button mBitmapShader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mColorMatrix = (Button) findViewById(R.id.color_matrix);
         mPixelsEffect = (Button) findViewById(R.id.pixels_effect);
         mMatrix = (Button) findViewById(R.id.matrix);
+        mRoundRectXfermode = (Button) findViewById(R.id.round_view_xfermode);
+        mBitmapShader = (Button) findViewById(R.id.bitmap_shader);
     }
 
     private void initEvent() {
@@ -35,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mColorMatrix.setOnClickListener(this);
         mPixelsEffect.setOnClickListener(this);
         mMatrix.setOnClickListener(this);
+        mRoundRectXfermode.setOnClickListener(this);
+        mBitmapShader.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.matrix:
                 intent = new Intent(this, MatrixActivity.class);
+                break;
+            case R.id.round_view_xfermode:
+                intent = new Intent(this, RoundRectXfermodeActivity.class);
+                break;
+            case R.id.bitmap_shader:
+                intent = new Intent(this, BitmapShaderActivity.class);
                 break;
         }
 
