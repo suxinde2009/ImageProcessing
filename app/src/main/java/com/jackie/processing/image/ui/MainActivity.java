@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mMatrix;
     private Button mRoundRectXfermode;
     private Button mBitmapShader;
+    private Button mReflect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mMatrix = (Button) findViewById(R.id.matrix);
         mRoundRectXfermode = (Button) findViewById(R.id.round_view_xfermode);
         mBitmapShader = (Button) findViewById(R.id.bitmap_shader);
+        mReflect = (Button) findViewById(R.id.reflect);
     }
 
     private void initEvent() {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mMatrix.setOnClickListener(this);
         mRoundRectXfermode.setOnClickListener(this);
         mBitmapShader.setOnClickListener(this);
+        mReflect.setOnClickListener(this);
     }
 
     @Override
@@ -64,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bitmap_shader:
                 intent = new Intent(this, BitmapShaderActivity.class);
+                break;
+            case R.id.reflect:
+                intent = new Intent(this, ReflectActivity.class);
                 break;
         }
 

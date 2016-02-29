@@ -96,12 +96,12 @@ public class MatrixActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         Matrix matrix = new Matrix();
-//        matrix.setValues(mMatrix);
+        matrix.setValues(mMatrix);
 //        matrix.setTranslate(100, 100);
 //        matrix.setRotate(60);
-        matrix.setScale(2, 2);
+//        matrix.setScale(2, 2);
 //        matrix.setSkew();
-        matrix.postTranslate(200, 200);
+//        matrix.postTranslate(200, 200);
 
         mMatrixView.setImageMatrix(matrix);
     }
